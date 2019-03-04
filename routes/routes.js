@@ -1,5 +1,5 @@
 const games = require("../games.json")
-const cute = require("../cute.json")
+const cutepets = require("../cutepets.json")
 
 var appRouter = function (app) {
   app.get("/", function(req, res) {
@@ -24,20 +24,20 @@ var appRouter = function (app) {
   });
 
   app.get("/cutepets", function(req, res) {
-    res.status(200).send(`Welcome to the cute pets api. We currently have ${cute.length} images and gifs in our database!\n\nEndpoints:\n/all - Display all images and gifs from our database\n/random - Display a random image or gif from our database\n/amount - Gives you the amount of entries in our database`);
+    res.status(200).send(`Welcome to the cute pets api. We currently have ${cutepets.length} images and gifs in our database!\n\nEndpoints:\n/all - Display all images and gifs from our database\n/random - Display a random image or gif from our database\n/amount - Gives you the amount of entries in our database`);
   });
 
   app.get("/cutepets/all", function(req, res) {
-    res.status(200).send(cute);
+    res.status(200).send(cutepets);
   });
 
   app.get("/cutepets/random", function(req, res) {
-    let data = cute[Math.floor(Math.random()*cute.length)];
+    let data = cutepets[Math.floor(Math.random()*cutepets.length)];
     res.status(200).send(data);
   });
 
   app.get("/cutepets/amount", function(req, res) {
-    res.status(200).send(`${cute.length}`);
+    res.status(200).send(`${cutepets.length}`);
   });
 
   // Old APIs
