@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Minecraft: Java Edition",
+    "description": "Minecraft is a sandbox game which allows player to build in a 3D procedurally generated world using a variety of different blocks. Other activies include exploration, combat and crafting.",
+    "developer": "Mojang",
+    "publisher": "Mojang",
+    "price": "$26.95 USD",
+    "url": "https://minecraft.net/",
+    "platform": "PC",
+    "genre": "Sandbox, Open-World"
+  },
+  {
+    "name": "Stardew Valley",
+    "description": "Stardew Valley is a farming simulation rpg developed by Eric 'ConcernedApe' Barone.",
+    "developer": "Eric 'ConcernedApe' Barone",
+    "publisher": "Eric 'ConcernedApe' Barone",
+    "price": "$14.99 USD",
+    "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+    "platform": "PC, PS4, Xbox One, Nintendo Switch, PSVita, Mobile (not released yet)",
+    "genre": "Simulation, RPG"
+  }
+]
