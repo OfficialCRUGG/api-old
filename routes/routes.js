@@ -3,7 +3,7 @@ const cute = require("../cute.json")
 
 var appRouter = function (app) {
   app.get("/", function(req, res) {
-    res.status(200).send("APIs:\n/randomgame\n/cute");
+    res.status(200).send("APIs:\n/randomgame\n/cutepets");
   });
 
   app.get("/randomgame", function(req, res) {
@@ -23,21 +23,39 @@ var appRouter = function (app) {
     res.status(200).send(`${games.length}`);
   });
 
-  app.get("/cute", function(req, res) {
-    res.status(200).send(`Welcome to the cute api. We currently have ${cute.length} images and gifs in our database!\n\nEndpoints:\n/all - Display all images and gifs from our database\n/random - Display a random image or gif from our database\n/amount - Gives you the amount of entries in our database`);
+  app.get("/cutepets", function(req, res) {
+    res.status(200).send(`Welcome to the cute pets api. We currently have ${cute.length} images and gifs in our database!\n\nEndpoints:\n/all - Display all images and gifs from our database\n/random - Display a random image or gif from our database\n/amount - Gives you the amount of entries in our database`);
   });
 
-  app.get("/cute/all", function(req, res) {
+  app.get("/cutepets/all", function(req, res) {
     res.status(200).send(cute);
   });
 
-  app.get("/cute/random", function(req, res) {
+  app.get("/cutepets/random", function(req, res) {
     let data = cute[Math.floor(Math.random()*cute.length)];
     res.status(200).send(data);
   });
 
-  app.get("/cute/amount", function(req, res) {
+  app.get("/cutepets/amount", function(req, res) {
     res.status(200).send(`${cute.length}`);
+  });
+
+  // Old APIs
+
+  app.get("/cute", function(req, res) {
+    res.status(200).send("Moved to http://api.crugg.de:3000/cutepets");
+  });
+
+  app.get("/cute/all", function(req, res) {
+    res.status(200).send("Moved to http://api.crugg.de:3000/cutepets/all");
+  });
+
+  app.get("/cute/random", function(req, res) {
+    res.status(200).send("Moved to http://api.crugg.de:3000/cutepets/random");
+  });
+
+  app.get("/cute/amount", function(req, res) {
+    res.status(200).send("Moved to http://api.crugg.de:3000/cutepets/amount");
   });
 }
 
