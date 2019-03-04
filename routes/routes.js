@@ -20,7 +20,7 @@ var appRouter = function (app) {
   });
 
   app.get("/randomgame/amount", function(req, res) {
-    res.status(200).send(games.length);
+    res.status(200).send(`${games.length}`);
   });
 
   app.get("/cute", function(req, res) {
@@ -37,7 +37,7 @@ var appRouter = function (app) {
   });
 
   app.get("/cute/amount", function(req, res) {
-    res.status(200).send(cute.length);
+    res.status(200).send(`${cute.length}`);
   });
 }
 
