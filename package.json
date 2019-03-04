@@ -1,0 +1,23 @@
+{
+  "name": "randomgame",
+  "version": "1.0.0",
+  "description": "Finds a random game from our library (no trash games)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanoshiibot/randomgame.git"
+  },
+  "author": "CRUGG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanoshiibot/randomgame/issues"
+  },
+  "homepage": "https://github.com/tanoshiibot/randomgame#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
