@@ -3,7 +3,8 @@ const cutepets = require("../cutepets.json")
 
 var appRouter = function (app) {
   app.get("/", function(req, res) {
-    res.status(200).send("APIs:\n/randomgame\n/cutepets");
+    // res.status(200).send("APIs:\n/randomgame\n/cutepets");
+    res.status(200).sendFile(__dirname + "/../web/index.html");
   });
 
   app.get("/randomgame", function(req, res) {
