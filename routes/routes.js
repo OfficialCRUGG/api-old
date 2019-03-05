@@ -1,5 +1,6 @@
 const games = require("../games.json")
 const cutepets = require("../cutepets.json")
+const airplanes = require("../airplanes.json")
 
 var appRouter = function (app) {
   app.get("/", function(req, res) {
@@ -39,6 +40,23 @@ var appRouter = function (app) {
 
   app.get("/cutepets/amount", function(req, res) {
     res.status(200).send(`${cutepets.length}`);
+  });
+
+  app.get("/airplanes", function(req, res) {
+    res.status(200).send(`Welcome to the airplanes api. We currently have ${cutepets.length} images and gifs in our database!\n\nEndpoints:\n/all - Display all images and gifs from our database\n/random - Display a random image or gif from our database\n/amount - Gives you the amount of entries in our database`);
+  });
+
+  app.get("/airplanes/all", function(req, res) {
+    res.status(200).send(airplanes);
+  });
+
+  app.get("/airplanes/random", function(req, res) {
+    let data = airplanes[Math.floor(Math.random()*airplanes.length)];
+    res.status(200).send(data);
+  });
+
+  app.get("/airplanes/amount", function(req, res) {
+    res.status(200).send(`${airplanes.length}`);
   });
 
   // Old APIs

@@ -1,0 +1,14 @@
+[
+  {
+    "fullName": "Airbus A380",
+    "name": "A3280",
+    "brand": "Airbus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Airbus_A380_overfly_crop.jpg/1200px-Airbus_A380_overfly_crop.jpg"
+  },
+  {
+    "fullName": "Airbus A320",
+    "name": "A320",
+    "brand": "Airbus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Airbus_A320-200_Airbus_Industries_%28AIB%29_%27House_colors%27_F-WWBA_-_MSN_001_%2810276181983%29_crop.jpg/1200px-Airbus_A320-200_Airbus_Industries_%28AIB%29_%27House_colors%27_F-WWBA_-_MSN_001_%2810276181983%29_crop.jpg"
+  }
+]
